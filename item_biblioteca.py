@@ -21,7 +21,23 @@ class item_biblioteca: #Criei uma superclasse chamada item_biblioteca
             self.__titulo = titulo
         else:
             print("Titulo inválido.")
-    
 
+    def set_ano(self, ano):
+        if ano > 0:
+            self.__ano = ano
+        else:
+            print("Ano inválido.")
 
-    
+    def emprestar(self):
+        if self.__disponivel:
+            self.__disponivel = False
+            print(f"Item '{self.__titulo}' emprestado com sucesso.")
+        else:
+            print(f"Item '{self.__titulo}' já está emprestado.")
+
+    def devolver(self):
+        self.__disponivel = True
+        print(f"Item '{self.__titulo}' devolvido com sucesso.")
+
+    def exibir_detalhes(self):
+        pass
