@@ -14,7 +14,7 @@ class Biblioteca:
                 item.exibir_detalhes()
 
     def buscar_item_por_codigo(self, codigo):
-        item = self.buscar_item_por_codigo(codigo):
+        item = self.buscar_item_por_codigo(codigo)
         for item in self.__itens:
             if item.get_codigo() == codigo:
                 return item
